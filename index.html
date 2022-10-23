@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Masonry Layout</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0');
 
     * {
       font-family: 'Inter', sans-serif;
@@ -15,37 +15,32 @@
     }
 
     body {
+      margin: 0;
       background-color: #05080b;
       background-image: url("assets/patterns/1.svg");
-      margin: 0;
     }
 
     div.layout {
-      padding: 12vw 4vw 128vw 4vw;
+      padding: 48px 24px 526px 24px;
       columns: 2;
-      column-gap: 10px;
+      column-gap: 12px;
     }
 
     div.card {
       position: relative;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       border-radius: 4px;
-      break-inside: avoid;
       overflow: auto;
+      break-inside: avoid;
     }
 
     div.card img {
-      display: block;
       width: 100%;
-      object-fit: contain;
-      background-color: #76767666;
+      display: block;
     }
 
     div.card-details {
       position: absolute;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
       inset: 0;
       top: unset;
       color: #d6d6de;
@@ -53,33 +48,12 @@
       background: linear-gradient(#00000000, #000000e6);
     }
 
-    div.title {
-      font-size: 3.5vw;
+    div.card-title {
+      font-size: 14px;
     }
 
-    div.description {
-      font-size: 2.5vw;
-    }
-
-    div.card-actions {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      inset: 0;
-      top: unset;
-      left: unset;
-      color: #d6d6de;
-      padding: 12px;
-    }
-
-    div.material-symbols-rounded {
-      font-size: 4vw;
-    }
-
-    div.stat {
-      font-size: 2.5vw;
+    div.card-description {
+      font-size: 11px;
     }
   </style>
 </head>
@@ -91,89 +65,59 @@
     <div class="card">
       <img src="assets/images/1.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">Fiona Art</div>
-        <div class="description">Jan 25, 2020</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">12.3M</div>
+        <div class="card-title">Fiona Art</div>
+        <div class="card-description">Jan 25, 2020</div>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/images/2.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">Michael Block</div>
-        <div class="description">Nov 15, 2019</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">12.3M</div>
+        <div class="card-title">Michael Block</div>
+        <div class="card-description">Nov 15, 2019</div>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/images/3.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">Benjamin Suter</div>
-        <div class="description">Jan 25, 2020</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">12.3M</div>
+        <div class="card-title">Benjamin Suter</div>
+        <div class="card-description">Jan 25, 2020</div>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/images/4.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">ph.galtri</div>
-        <div class="description">Sep 19, 2022</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">12.3M</div>
+        <div class="card-title">ph.galtri</div>
+        <div class="card-description">Sep 19, 2022</div>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/images/5.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">Harrison Haines</div>
-        <div class="description">Mar 17, 2022</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">24.6k</div>
+        <div class="card-title">Harrison Haines</div>
+        <div class="card-description">Mar 17, 2022</div>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/images/6.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">BotanichKa</div>
-        <div class="description">Jan 27, 2012</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">15.5k</div>
+        <div class="card-title">BotanichKa</div>
+        <div class="card-description">Jan 27, 2012</div>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/images/7.jpeg" alt="...">
       <div class="card-details">
-        <div class="title">Lalezarfa</div>
-        <div class="description">Mar 21, 202</div>
-      </div>
-      <div class="card-actions">
-        <div class="material-symbols-rounded">favorite</div>
-        <div class="stat">843.1k</div>
+        <div class="card-title">Lalezarfa</div>
+        <div class="card-description">Mar 21, 202</div>
       </div>
     </div>
-
   </div>
-
 </body>
 
 </html>
