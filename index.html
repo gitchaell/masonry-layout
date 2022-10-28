@@ -9,6 +9,10 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+    :root {
+      --viewport-ratio: ((100vw - 320px) / (2560 - 320));
+    }
+
     * {
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
@@ -17,19 +21,20 @@
     body {
       background-color: #05080b;
       margin: 0;
-      background-image: url("assets/patterns/1.svg");
+      background-image: url('assets/patterns/1.svg');
+      background-size: calc(32px + (128 - 32) * var(--viewport-ratio));
     }
 
     div.layout {
-      padding: 72px 81px 526px 81px;
-      columns: auto 2;
-      column-gap: 12px;
+      max-width: calc(280px + (1800 - 280) * var(--viewport-ratio));
+      margin: calc(20px + (72 - 20) * var(--viewport-ratio)) auto;
+      column-gap: calc(8px + (20 - 8) * var(--viewport-ratio));
     }
 
     div.card {
       position: relative;
-      margin-bottom: 12px;
-      border-radius: 4px;
+      margin-bottom: calc(8px + (20 - 8) * var(--viewport-ratio));
+      border-radius: calc(4px + (16 - 4) * var(--viewport-ratio));
       overflow: auto;
       break-inside: avoid;
     }
@@ -44,16 +49,58 @@
       inset: 0;
       top: unset;
       color: #d6d6de;
-      padding: 32px 12px 12px 12px;
+      padding: 2vw 1vw 1vw 1vw;
       background: linear-gradient(#00000000, #000000e6);
     }
 
     div.card-title {
-      font-size: 14px;
+      font-size: calc(12px + (32 - 12) * var(--viewport-ratio));
     }
 
     div.card-description {
-      font-size: 11px;
+      font-size: calc(10px + (30 - 10) * var(--viewport-ratio));
+    }
+
+    /* TV */
+    @media all and (min-width: 1440px) {
+      div.layout {
+        columns: auto 5;
+      }
+    }
+
+    /* Desktop */
+    @media all and (min-width: 1280px) and (max-width: 1440px) {
+      div.layout {
+        columns: auto 4;
+      }
+    }
+
+    /* Laptop */
+    @media all and (min-width: 1024px) and (max-width: 1280px) {
+      div.layout {
+        columns: auto 4;
+      }
+    }
+
+    /* Tablet Large */
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      div.layout {
+        columns: auto 3;
+      }
+    }
+
+    /* Tablet */
+    @media all and (min-width: 425px) and (max-width: 768px) {
+      div.layout {
+        columns: auto 3;
+      }
+    }
+
+    /* Phone */
+    @media all and (max-width: 425px) {
+      div.layout {
+        columns: auto 2;
+      }
     }
   </style>
 </head>
@@ -61,6 +108,7 @@
 <body>
 
   <div class="layout">
+
     <div class="card">
       <img src="assets/images/1.jpeg" alt="..." />
       <div class="card-details">
@@ -122,6 +170,22 @@
       <div class="card-details">
         <div class="card-title">Fiona Art</div>
         <div class="card-description">Jan 25, 2020</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/9.jpeg" alt="..." />
+      <div class="card-details">
+        <div class="card-title">paul voie</div>
+        <div class="card-description">Sep 28, 202</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/10.jpeg" alt="..." />
+      <div class="card-details">
+        <div class="card-title">Michael Block</div>
+        <div class="card-description">Nov 15, 2019</div>
       </div>
     </div>
 
